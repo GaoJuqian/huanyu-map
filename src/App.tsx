@@ -2,6 +2,7 @@ import { createSignal } from "solid-js";
 import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+import BaseMap from "./view/BaseMap";
 
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
@@ -48,4 +49,6 @@ function App() {
   );
 }
 
-export default App;
+export default function () {
+    return (<BaseMap></BaseMap>)
+};
